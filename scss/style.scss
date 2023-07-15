@@ -25,6 +25,7 @@
 .body{
     background-color:#e9e7e7;
     color: #232323;
+    font-size: 17px;
 }
 .container{
     max-width: 1326px;
@@ -79,11 +80,16 @@
     display: flex;
     justify-content: space-between;
     &__text{
-        max-width: 426px;
+        max-width: 440px;
+        display: flex;
+        flex-direction: column;
     }
 }
 .main__group_1{
     padding-bottom: 159px;
+    background-image: url('../img/bg_1.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .title{
     font-family: Cardo;
@@ -105,6 +111,8 @@
 .group_1__button{
     color: #e9e7e7;
     background-color: #232323;
+    width: 256px;
+    height: 54px;
 }
 .section__img{
     background-image: url('../img/img_1.png');
@@ -112,4 +120,30 @@
     height: 419px;
     background-repeat: no-repeat;
     background-position: center;
+}
+/*Group_2*/
+.main__group_2{
+    background-color: #232323;
+    color: #e9e7e7;
+    padding-top: 50px;
+    padding-bottom:54px ;
+    background-image: url('../img/bg_2.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    .section{
+        justify-content: center;
+        &__text{
+            align-items: center;
+        }
+    }
+    .title--size{
+        font-size: 55px;
+        line-height: 56px;
+        letter-spacing: -2.49px;
+        }
+}
+.group_2__button{
+    background-color:#232323;
+    border-color: #e9e7e7;
+    color: #e9e7e7;
 }

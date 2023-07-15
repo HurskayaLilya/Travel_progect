@@ -25,6 +25,7 @@
 .body {
   background-color: #e9e7e7;
   color: #232323;
+  font-size: 17px;
 }
 
 .container {
@@ -101,11 +102,21 @@
           justify-content: space-between;
 }
 .section__text {
-  max-width: 426px;
+  max-width: 440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .main__group_1 {
   padding-bottom: 159px;
+  background-image: url("../img/bg_1.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .title {
@@ -130,6 +141,8 @@
 .group_1__button {
   color: #e9e7e7;
   background-color: #232323;
+  width: 256px;
+  height: 54px;
 }
 
 .section__img {
@@ -138,4 +151,36 @@
   height: 419px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/*Group_2*/
+.main__group_2 {
+  background-color: #232323;
+  color: #e9e7e7;
+  padding-top: 50px;
+  padding-bottom: 54px;
+  background-image: url("../img/bg_2.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.main__group_2 .section {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.main__group_2 .section__text {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main__group_2 .title--size {
+  font-size: 55px;
+  line-height: 56px;
+  letter-spacing: -2.49px;
+}
+
+.group_2__button {
+  background-color: #232323;
+  border-color: #e9e7e7;
+  color: #e9e7e7;
 }
