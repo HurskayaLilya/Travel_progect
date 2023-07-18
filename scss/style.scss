@@ -1,24 +1,31 @@
 @font-face {
     font-family: 'Lato';
-    src: local('Lato Regular'), local('Lato-Regular'), url('latoregular.woff2') format('woff2'), url('latoregular.woff') format('woff'), url('latoregular.ttf') format('truetype');
+    src: url('../fonts/latoregular.ttf'),
+        url('../fonts/latoregular.woff'),
+        url('../fonts/latoregular.woff2')        ;
     font-weight: 400;
     font-style: normal;
  }
  @font-face {
     font-family: 'Lato Light';
-    src: local('Lato Light'), local('Lato-Light'), url('latolight.woff2') format('woff2'), url('latolight.woff') format('woff'), url('latolight.ttf') format('truetype');
+    src: url('../fonts/latolight.ttf'),
+         url('../fonts/latolight.woff'),
+         url('../fonts/latolight.woff2');
     font-weight: 300;
     font-style: normal;
 }
     @font-face {
-        font-family: 'Lato';
-        src: local('Lato Black'), local('Lato-Black'), url('latoblack.woff2') format('woff2'), url('latoblack.woff') format('woff'), url('latoblack.ttf') format('truetype');
+        font-family: 'Lato Black';
+        src: url('../fonts/latoblack.ttf'),
+             url('../fonts/latoblack.woff'),
+             url('../fonts/latoblack.woff2'),;
         font-weight: 900;
         font-style: normal;
     }
     @font-face {
         font-family: 'Cardo';
-        src: local('Cardo'), url('cardo.woff2') format('woff2'), url('cardo.woff') format('woff'), url('cardo.ttf') format('truetype');
+        src: url('../fonts/cardo.woff')
+        url('../fonts/cardo.woff2');
         font-weight: 400;
         font-style: normal;
     }
@@ -152,8 +159,8 @@
     background-image: url('../img/bg_3.png');
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 156px;
-    margin-bottom: 200px;
+    padding-top: 156px;
+   padding-bottom: 200px;
     .section{
         justify-content: center;
     }
@@ -201,3 +208,47 @@
     width: 53px;
     margin-top: 32px;
 }
+/*Group-4*/
+.main__group_4{
+    padding: 400px;
+    padding: 269px;
+    background-image: url('../img/bg_4.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    .title--size{
+        font-size: 98px;
+        line-height: 98px;
+    }
+    .img{
+        width: 73px;
+        height: 74px;
+        background-position: center;
+        &--4{
+            background-image: url('../img/icon_1.png');
+        }
+    }
+    .section{
+        justify-content: center;
+    }
+}
+.group-4{
+    max-width: 780px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.links{
+    display: flex;
+    .link{
+        border-right: 1px solid #232323;
+        margin-right: 10px;
+        font-family: "Lato Black";
+        font-size: 25px;
+        &:last-child{
+            margin-right: 0;
+            border-right: 0;
+        }
+    }
+
+}
+
