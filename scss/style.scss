@@ -1,3 +1,4 @@
+@import "variables";
 @font-face {
     font-family: 'Lato';
     src: url('../fonts/latoregular.ttf'),
@@ -30,9 +31,10 @@
         font-style: normal;
     }
 .body{
-    background-color:#e9e7e7;
-    color: #232323;
+    background-color:$main-color;
+    color: $color;
     font-size: 17px;
+    min-width: 1326px;
 }
 .container{
     max-width: 1326px;
@@ -62,7 +64,7 @@
     text-decoration: none;
     font-size: 21px;
     font-family: 'Lato Light';
-    color: #515155;
+    color: $color;
     font-weight: 300;
     font-style: normal;
     letter-spacing: normal;
@@ -71,13 +73,13 @@
     &--active{
         font-family: 'Lato';
         font-weight: 900;
-        color:#232323;;
+        color:$color;;
     }
 }
 .button{
     padding: 19px 55px;
     border-radius: 5px;
-    border: 3px solid #232323;
+    border: 3px solid $color;
     font-size: 21px;
     font-family: 'Lato';
     font-weight: 900;
@@ -116,8 +118,8 @@
     padding-bottom: 43px;
 }
 .group_1__button{
-    color: #e9e7e7;
-    background-color: #232323;
+    color: $main-color;
+    background-color: $color;
     width: 256px;
     height: 54px;
 }
@@ -130,8 +132,8 @@
 }
 /*Group_2*/
 .main__group_2{
-    background-color: #232323;
-    color: #e9e7e7;
+    background-color: $color;
+    color: $main-color;
     padding-top: 50px;
     padding-bottom:54px ;
     background-image: url('../img/bg_2.png');
@@ -150,9 +152,9 @@
         }
 }
 .group_2__button{
-    background-color:#232323;
-    border-color: #e9e7e7;
-    color: #e9e7e7;
+    background-color:$color;
+    border-color: $main-color;
+    color: $main-color;
 }
 /*Group_3*/
 .main__group_3{
@@ -191,7 +193,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     &::after{
-        border: 10px solid red;
+        border: 10px solid $color;
     }
     &--1{
         background-image: url('../img/img_2.png');
@@ -204,7 +206,7 @@
     }
 }
 .border{
-    border-top: 1px solid #232323;
+    border-top: 1px solid $color;
     width: 53px;
     margin-top: 32px;
 }
@@ -240,7 +242,7 @@
 .links{
     display: flex;
     .link{
-        border-right: 1px solid #232323;
+        border-right: 1px solid $color;
         margin-right: 10px;
         font-family: "Lato Black";
         font-size: 25px;
@@ -307,8 +309,8 @@
 }
 /*Group_6*/
 .main__group_6{
-    color: #e9e7e7;
-    background-color: #232323;
+    color: $main-color;
+    background-color: $color;
     background-image: url('../img/bg_5.png');
     background-repeat: no-repeat;
 background-position: left;
@@ -357,8 +359,8 @@ background-position: left;
 }
 /*Group-9*/
 .main__group_9{
-    background-color: #e9e7e7;
-    color: #232323;
+    background-color: $main-color;
+    color: $color;
     font-family: Cardo;
     font-size: 81px;
     &--inner{
@@ -393,7 +395,7 @@ background-position: left;
         padding: 20px 0 20px 30px;
         margin-bottom: 25px;
         border-radius: 5px;
-        border: 3px solid #232323;
+        border: 3px solid $color;
         &--size{
             min-height: 224px;
         }
@@ -402,11 +404,119 @@ background-position: left;
         }
     }
     .button{
-        background-color: #232323;
-        color: #e9e7e7;
+        background-color: $color;
+        color: $main-color;
     }
 }
 .title__request{
     margin-bottom: 37px;
     font-weight: bold;
+}
+/*group7*/
+.main__group_7{
+    &--inner{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 176px;
+        margin-bottom: 310px;
+        .subtitle{
+            font-size: 81px;
+            font-family: 'Cardo';
+            font-weight: 900;
+            padding-bottom: 130px;
+            &__item{
+                position: relative;
+                padding: 20px 0;
+                
+                &::after{
+                    content: "+";
+                    width: 19px;
+                    height: 19px;
+                    color:$color;
+                    left:670px;
+                    position: absolute;
+                    font-size: 30px;
+                }
+            }
+        }
+        .items{
+            font-family: Lato;
+            font-size: 17px;
+            font-weight: 400;
+        }
+        .item{
+            border-bottom: 2px solid $color;
+            padding-left: 40px;
+            position: relative;
+            &:active .text__item{
+                display: block;
+
+            }
+        }
+        .block{
+            max-width: 737px;
+        }
+    }
+    .img{
+        width: 390px;
+        height: 516px;
+        background-image: url('../img/img_2.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+.text__item{
+    display: none;
+    position: absolute;
+}
+/*footer*/
+.footer{
+    background-color: $footer;
+    padding: 118px 0;
+    font-size: 21px;
+    font-family: 'Lato';
+    font-weight: 400;
+    .section{
+        justify-content: flex-start;
+    }
+}
+.logo{
+    color: $color;
+    font-size: 63px;
+    font-family: 'Cardo';
+    font-weight: 900;
+    margin-right: 120px;
+    max-width: 231px;
+}
+.section__links{
+    .subtitle{
+        font-family: 'Lato Black';
+        font-size: 25px;
+        margin-bottom: 50px;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .link{
+        font-size: 21px;
+        font-family: Lato;
+        font-weight: 400;
+        border: 0;
+        padding-bottom: 34px;
+        margin-right: 0;
+        display: block;
+    }
+    .block{
+        margin-right: 90px;
+        &:last-child{
+            margin-right: 0;
+        }
+
+    }
+}
+.copyright{
+    margin-top: 130px;
+    text-align: center;
 }
