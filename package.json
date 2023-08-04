@@ -1,0 +1,28 @@
+{
+  "name": "travel_progect",
+  "version": "1.0.0",
+  "description": "Сборка gulp",
+  "main": "index.html",
+  "dependencies": {
+    "jquery": "^3.7.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HurskayaLilya/Travel_progect.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HurskayaLilya/Travel_progect/issues"
+  },
+  "homepage": "https://github.com/HurskayaLilya/Travel_progect#readme"
+}
