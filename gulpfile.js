@@ -1,68 +1,38 @@
-const fileinclude = require('gulp-file-include');
+//основной модуль
+import gulp from "gulp";
+//импорт путей 
+import { path } from "./gulp/config/path.js";
+//импорт общих плагинов
+import { plugins } from "./gulp/config/plugins.js";
 
-
-let project_folder = "dist";
-let source_folder = "#src";
-
-let path = {
-   build: {
-      html: project_folder + "/",
-      css: project_folder + "/css/",
-      js: project_folder + "/js/",
-      img: project_folder +"/img/",
-      fonts: project_folder+ "/fonts/",
-   },
-   src: {
-      html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
-      css: source_folder + "/scss/style.scss",
-      js: source_folder + "/js/script.js",
-      img: project_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-      fonts: source_folder + "/fonts/*.ttf",
-   },
-   watch: {
-      html: source_folder + "/**/*.html",
-      css: source_folder + "/scss/**/*.scss",
-      js: source_folder + "/js/**/*.js",
-      img: project_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-   },
-   clean: "./" + project_folder + "/"
+//передаем значения в глобальную переменную
+global.app = {
+   path: path,
+   gulp: gulp,
+   plugins: plugins
 }
 
-let { src, dest } = require('gulp'),
-   gulp = require('gulp'),
-   browsersync = require("browser-sync").create();
+//импорт задач
+import { copy } from "./gulp/tasks/copy.js";
+import { reset } from "./gulp/tasks/reset.js";
+import { html } from "./gulp/tasks/html.js";
+import { server } from "./gulp/tasks/server.js";
+import { scss } from "./gulp/tasks/scss.js";
+import { js } from "./gulp/tasks/js.js";
+import { images } from "./gulp/tasks/images.js";
 
-
-
-
-
-
-
-function browserSync(params) {
-   browsersync.init({
-      server: {
-         baseDir: "./" + project_folder + "/"
-      },
-      port: 3000,
-      notify: false
-   })
+//наблюдатель за изменениями в файлах
+function watcher() {
+   gulp.watch(path.watch.files, copy);
+   gulp.watch(path.watch.html, html);
+   gulp.watch(path.watch.scss, scss);
+   gulp.watch(path.watch.scss, js);
+   gulp.watch(path.watch.scss, images);
 }
 
-function html() {
-   return src(path.src.html)
-      .pipe(fileinclude())
-      .pipe(dest(path.build.html))
-      .pipe(browsersync.stream())
-}
+const mainTasks = gulp.parallel(copy, html, scss, js, images);
+//построение сценариев виполнения задач
+const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 
-function watchFiles(params) {
-   gulp.watch([path.watch.html], html);
-}
-
-let build = gulp.series(html);
-let watch = gulp.parallel(build, watchFiles, browserSync);
-
-exports.html = html;
-exports.build = build;
-exports.watch = watch;
-exports.default = watch;
+//виконання задач по умолчанию
+gulp.task('default', dev);
