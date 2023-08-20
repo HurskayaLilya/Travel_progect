@@ -81,7 +81,7 @@ table {
 }
 
 .container {
-  max-width: 1237px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
@@ -293,13 +293,6 @@ display: block;
   font-size: 17px;
   line-height: 20px;
   width: 60%;
-}
-
-.group-1__img {
-  background-image: url("../img/img_1.png");
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: right;
 }
 
 @media (max-width: 992px) {
@@ -877,7 +870,6 @@ display: block;
 }
 .main__group_7--inner {
   margin-top: 176px;
-  margin-bottom: 310px;
   display: flex;
   justify-content: space-between;
 }
@@ -944,6 +936,77 @@ display: block;
     flex-basis: auto;
   }
 }
+/*Group-8*/
+.main__group-8--inner {
+  padding: 100px 15px;
+}
+.main__group-8 .card__icon {
+  border-radius: 50%;
+  width: 136px;
+  height: 136px;
+  background-color: #232323;
+  background-image: url("../img/Person_Icon.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin: 0 auto;
+}
+.main__group-8 .card__name {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  margin: 49px 0 24px 0;
+}
+.main__group-8 .card__text {
+  text-align: center;
+  color: #6d6d6d;
+}
+
+.say__subtitle {
+  font-size: 81px;
+  line-height: 101.2345679012%;
+  font-weight: bold;
+  letter-spacing: -2.5px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+.say__cards {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.say__card {
+  flex-basis: 33.3%;
+  padding: 75px 41px;
+  border-radius: 10px;
+  border: 3px solid #232323;
+}
+.say__card:nth-child(3) {
+  margin: 0 20px;
+}
+
+.card__arrow {
+  width: 83px;
+  height: 73px;
+  border-radius: 5%;
+  border: 2px solid #232323;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  position: absolute;
+  top: 40%;
+}
+
+.card__arrow-left {
+  background-image: url("../img/left.png");
+  left: -3.3%;
+}
+
+.card__arrow-right {
+  right: -3.3%;
+  background-image: url("../img/right.png");
+}
+
 /*footer*/
 .footer {
   background-color: #c4c4c4;
