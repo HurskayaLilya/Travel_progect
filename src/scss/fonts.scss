@@ -2,14 +2,14 @@
 	font-family: latoblack;
 	font-display: swap;
 	src: url("../fonts/latoblack.woff2") format("woff2"), url("../fonts/latoblack");
-	font-weight: 400;
+	font-weight: 900;
 	font-style: normal;
 }
 @font-face {
 	font-family: latolight;
 	font-display: swap;
 	src: url("../fonts/latolight.woff2") format("woff2"), url("../fonts/latolight");
-	font-weight: 400;
+	font-weight: 300;
 	font-style: normal;
 }
 @font-face {
@@ -19,3 +19,11 @@
 	font-weight: 400;
 	font-style: normal;
 }
+@font-face {
+	font-family: cardobold;
+	font-display: swap;
+	src: url("../fonts/cardobold.woff") format("woff"), url("../fonts/cardobold.woff");
+	font-weight: 900;
+	font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap');

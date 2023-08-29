@@ -73,13 +73,20 @@ position: relative;
 margin:  0 70px 0 0px;
 }
 .menu__link {
+    font-family: 'latoregular';
    color: #515155;
    font-size: 21px;
    text-decoration: none;
    font-weight: 300;
     &:hover{
+        color: #222222;
         text-decoration: underline;
+        transition: all 0.3s ease 0s;
     }
+}
+._page{
+    font-family: 'latobold';
+    font-weight: 900;
 }
 .btn{
     border-radius: 5px;
@@ -90,9 +97,11 @@ margin:  0 70px 0 0px;
     text-align: center;
     text-decoration: none;
     color: $color;
+    font-family: 'latoblack';
     &:hover{
         background-color: $color;
         color: $main-color;
+        transition: all 0.3s ease 0s;
     }
     &__reverse{
         color: $main-color;
@@ -231,7 +240,7 @@ body._lock{
     background-position: center;
 }
 .title{
-    font-family: Cardo;
+    font-family: 'Cardo', serif;
     font-size: 81px;
     font-weight: bold;
     line-height: 82px;
@@ -239,18 +248,20 @@ body._lock{
     padding-bottom: 35px;
 }
 .text{
-    font-family: Lato;
+    font-family: 'latoregular';
     font-size: 17px;
     font-weight: 400;
     font-style: normal;
     line-height: normal;
-    padding-bottom: 43px;
     letter-spacing: -1.11px;
 }
 .section{
     display: flex;
 }
 .group-1{
+    &__text{
+        padding-bottom: 48px;
+    }
     .section{ 
     justify-content: space-between;
     }
@@ -308,6 +319,9 @@ body._lock{
         line-height: 56px;
         letter-spacing: -2.49px;text-align: center;
         }
+    &__text{
+        padding-bottom: 40px;
+    }
 
     }
 @media (max-width:767px){
@@ -328,11 +342,13 @@ body._lock{
 .cards{
     display: flex;
     flex-flow: row wrap;
+    justify-content: start;
 }
 .card{
-    margin-right: 30px;
-    max-width: 363px;
+    flex: 0 0 363px;
+    margin-right: 60px;
     position: relative;
+    margin-bottom: 20px;
     &::before{
         content: "";
         width:53px;
@@ -345,9 +361,10 @@ body._lock{
     }
 
     &:last-child{
-        padding-right: 0;
+        margin-right: 0;
     }
     &__title{
+        font-family: 'Cardo', serif;
         font-size: 36px;
         line-height: 37px;
         padding-top: 62px;
@@ -364,24 +381,24 @@ body._lock{
 @media (max-width: 992px) {
     .group-3{
         padding-bottom: 100px;
-    }
-    .card{
-        margin-right: 20px;
-        &:nth-child(even){
-            margin-right: 0;
+        .cards{
+            justify-content: center;
+        }
+        .card{
+            margin-right: 30px;
         }
     }
 }
 @media (max-width: 767px) {
     .group-3{
-        padding-bottom: 75px;
+        padding:50px;
     .cards{
         justify-content: center;
     }
     .card{
         margin-right: 0px;
         margin-bottom: 20px;
-        max-width: none;
+        flex-basis: 100%;
         &::before{
             width: 0;
         }
@@ -431,7 +448,7 @@ body._lock{
         border-right: 1px solid $color;
         margin-right: 10px;
         padding: 0 10px;
-        font-family: "Lato Black";
+        font-family: "latoblack";
         font-size: 25px;
         text-decoration: none;
         color: $color;
@@ -441,6 +458,7 @@ body._lock{
         }
         &:hover{
             text-decoration: underline;
+            transition: all 0.3s ease 0s;
         }
     }
 
@@ -484,6 +502,7 @@ body._lock{
         display: flex;
         padding-top: 78px;
          .headline{
+            font-size: 'Cardo';
             padding-right: 46px;
             max-width: 236px;
         }
@@ -618,7 +637,7 @@ body._lock{
     }
     .subtitle{
         font-size: 25px;
-        font-family: 'Lato Black';
+        font-family: 'latoblack';
         padding-bottom: 19px;
 
     }
@@ -665,7 +684,7 @@ body._lock{
 .group-9{
     background-color: $main-color;
     color: $color;
-    font-family: Cardo;
+    font-family: 'Cardo';
     font-size: 81px;
     padding: 110px 0 210px 0;
     .section{
@@ -688,7 +707,7 @@ body._lock{
 
     &__request{
         font-size: 21px;
-        font-family: 'Lato';
+        font-family: 'latolight';
         padding: 20px 0 20px 30px;
         margin-bottom: 25px;
         border-radius: 5px;
@@ -700,10 +719,7 @@ body._lock{
             margin-bottom: 0;
         }
     }
-    .button{
-        background-color: $color;
-        color: $main-color;
-    }
+
 }
 .title__request{
     margin-bottom: 37px;
@@ -722,9 +738,6 @@ body._lock{
         .form__request{
             margin-bottom: 15px;
             font-size: 30px;
-        }
-        .button{
-            width: 100%;
         }
         .request .form{
             flex-basis: 100%;
@@ -749,6 +762,7 @@ body._lock{
         padding-top: 10px;
     }
     .block__title{
+        font-family: 'latoregular';
         position: relative;
         cursor: pointer;
         padding-right: 15px;
@@ -876,6 +890,7 @@ body._lock{
             margin: 0 auto;
         }
         &__name{
+            font-family: 'latoblack';
             font-size: 25px;
             font-weight: 400;
             text-align: center;
@@ -891,6 +906,7 @@ body._lock{
 
     min-height: 0px;
     &__subtitle{
+        font-family: 'Cardo';
         font-size: 81px;
         /* line-height: 82 / 81 * 100%; */
         font-weight: bold;
@@ -955,28 +971,35 @@ body._lock{
     font-family: 'Lato';
     font-weight: 400;
     .section{
-        justify-content: flex-start;
+        flex-direction: column;
     }
 }
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    .subtitle{
+        grid-column-start: 1;
+        grid-column-end: 5;
+
+    }
+}
+
 .logo{
     color: $color;
     font-size: 63px;
     font-family: 'Cardo';
     font-weight: 900;
-    margin-right: 120px;
+    margin-right: 20px;
     max-width: 231px;
 }
 .section__links{
+    display: grid;
+    grid-template-columns: repeat(4,1fr); 
+    gap: 50px 5%; 
     .subtitle{
         font-family: 'Lato Black';
         font-size: 25px;
-        margin-bottom: 50px;
         font-weight: 900;
-    }
-    .links{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
     }
     .link{
         font-size: 21px;
@@ -984,67 +1007,46 @@ body._lock{
         font-weight: 400;
         border: 0;
         padding-bottom: 34px;
-        margin-right: 0;
         display: block;
-    }
-    .block{
-        margin-right: 90px;
-        &:last-child{
-            margin-right: 0;
+        text-decoration: none;
+        color: inherit;
+        &:hover{
+            text-decoration: underline;
+            color: #7d7d94;
+            transition: all 0.3s ease 0s;
         }
 
     }
-}
+
+
+    }
 .copyright{
-    margin-top: 130px;
+    margin-top: 120px;
     text-align: center;
 }
 @media(max-width:993px){
     .footer{
-        padding: 50px;
-    }
-    .logo{
-        align-self: center;
-    }
-   .section__links{
-    .links{
-        flex-direction: column;
-    }
-    .subtitle{
-        margin-bottom: 25px;
-    }
+        padding: 50px 0;
+        .wrapper{
+            flex-direction: column;
+        }
+        .copyright{
+            margin-top: 50px;
+        }
+        .logo{
+            margin-bottom: 30px;
+        }
+        .section__links{
+            row-gap: 30px;
+        }
+}
+}
+@media(max-width:767px){
+    .footer {
+        .subtitle{
+            font-size: 30px;
+        }
     .link{
-        padding-bottom: 20px;
         font-size: 25px;
     }
-   } 
-   .copyright{
-    margin-top: 50px;
-   }
-}
-/* .block._init .block__title {
-    cursor: pointer;
-}
-.block._init .block__title {
-    padding: 10px 40px 10px 10px;
-}
-.block__title{
-    position: relative;
-}
-.block._init .block__title::before,
-.block._init .block__title::after{
-    content: "";
-    width: 20px;
-    height: 1px;
-    background-color: black;
-    position: absolute;
-    right: 10px;
-    top: 20px;
-    transition: transform 0.3s ease 0s;
-}
-.block._init .block__title::after{
-    transform: rotate(-90deg);
-}
-.block._init .item__subtitle._active::after{
-    transform: rotate(0deg);
-} */
+}}

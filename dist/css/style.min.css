@@ -1,15 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap");
 @font-face {
   font-family: latoblack;
   font-display: swap;
   src: url("../fonts/latoblack.woff2") format("woff2"), url("../fonts/latoblack");
-  font-weight: 400;
+  font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: latolight;
   font-display: swap;
   src: url("../fonts/latolight.woff2") format("woff2"), url("../fonts/latolight");
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
@@ -17,6 +18,13 @@
   font-display: swap;
   src: url("../fonts/latoregular.woff2") format("woff2"), url("../fonts/latoregular");
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: cardobold;
+  font-display: swap;
+  src: url("../fonts/cardobold.woff") format("woff"), url("../fonts/cardobold.woff");
+  font-weight: 900;
   font-style: normal;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -149,13 +157,21 @@ table {
 }
 
 .menu__link {
+  font-family: "latoregular";
   color: #515155;
   font-size: 21px;
   text-decoration: none;
   font-weight: 300;
 }
 .menu__link:hover {
+  color: #222222;
   text-decoration: underline;
+  transition: all 0.3s ease 0s;
+}
+
+._page {
+  font-family: "latobold";
+  font-weight: 900;
 }
 
 .btn {
@@ -167,10 +183,12 @@ table {
   text-align: center;
   text-decoration: none;
   color: #232323;
+  font-family: "latoblack";
 }
 .btn:hover {
   background-color: #232323;
   color: #e9e7e7;
+  transition: all 0.3s ease 0s;
 }
 .btn__reverse {
   color: #e9e7e7;
@@ -303,7 +321,7 @@ body._lock {
 }
 
 .title {
-  font-family: Cardo;
+  font-family: "Cardo", serif;
   font-size: 81px;
   font-weight: bold;
   line-height: 82px;
@@ -312,12 +330,11 @@ body._lock {
 }
 
 .text {
-  font-family: Lato;
+  font-family: "latoregular";
   font-size: 17px;
   font-weight: 400;
   font-style: normal;
   line-height: normal;
-  padding-bottom: 43px;
   letter-spacing: -1.11px;
 }
 
@@ -325,6 +342,9 @@ body._lock {
   display: flex;
 }
 
+.group-1__text {
+  padding-bottom: 48px;
+}
 .group-1 .section {
   justify-content: space-between;
 }
@@ -380,6 +400,9 @@ body._lock {
   letter-spacing: -2.49px;
   text-align: center;
 }
+.group-2__text {
+  padding-bottom: 40px;
+}
 
 @media (max-width: 767px) {
   .group_2__title {
@@ -398,12 +421,14 @@ body._lock {
 .cards {
   display: flex;
   flex-flow: row wrap;
+  justify-content: start;
 }
 
 .card {
-  margin-right: 30px;
-  max-width: 363px;
+  flex: 0 0 363px;
+  margin-right: 60px;
   position: relative;
+  margin-bottom: 20px;
 }
 .card::before {
   content: "";
@@ -416,9 +441,10 @@ body._lock {
   z-index: 5;
 }
 .card:last-child {
-  padding-right: 0;
+  margin-right: 0;
 }
 .card__title {
+  font-family: "Cardo", serif;
   font-size: 36px;
   line-height: 37px;
   padding-top: 62px;
@@ -434,16 +460,16 @@ body._lock {
   .group-3 {
     padding-bottom: 100px;
   }
-  .card {
-    margin-right: 20px;
+  .group-3 .cards {
+    justify-content: center;
   }
-  .card:nth-child(even) {
-    margin-right: 0;
+  .group-3 .card {
+    margin-right: 30px;
   }
 }
 @media (max-width: 767px) {
   .group-3 {
-    padding-bottom: 75px;
+    padding: 50px;
   }
   .group-3 .cards {
     justify-content: center;
@@ -451,7 +477,7 @@ body._lock {
   .group-3 .card {
     margin-right: 0px;
     margin-bottom: 20px;
-    max-width: none;
+    flex-basis: 100%;
   }
   .group-3 .card::before {
     width: 0;
@@ -503,7 +529,7 @@ body._lock {
   border-right: 1px solid #232323;
   margin-right: 10px;
   padding: 0 10px;
-  font-family: "Lato Black";
+  font-family: "latoblack";
   font-size: 25px;
   text-decoration: none;
   color: #232323;
@@ -514,6 +540,7 @@ body._lock {
 }
 .links .link:hover {
   text-decoration: underline;
+  transition: all 0.3s ease 0s;
 }
 
 @media (max-width: 992px) {
@@ -558,6 +585,7 @@ body._lock {
   padding-top: 78px;
 }
 .group-5 .article .headline {
+  font-size: "Cardo";
   padding-right: 46px;
   max-width: 236px;
 }
@@ -677,7 +705,7 @@ body._lock {
 }
 .group-6 .subtitle {
   font-size: 25px;
-  font-family: "Lato Black";
+  font-family: "latoblack";
   padding-bottom: 19px;
 }
 .group-6 .text__paragraph {
@@ -723,7 +751,7 @@ body._lock {
 .group-9 {
   background-color: #e9e7e7;
   color: #232323;
-  font-family: Cardo;
+  font-family: "Cardo";
   font-size: 81px;
   padding: 110px 0 210px 0;
 }
@@ -748,7 +776,7 @@ body._lock {
 }
 .form__request {
   font-size: 21px;
-  font-family: "Lato";
+  font-family: "latolight";
   padding: 20px 0 20px 30px;
   margin-bottom: 25px;
   border-radius: 5px;
@@ -759,10 +787,6 @@ body._lock {
 }
 .form__request:last-child {
   margin-bottom: 0;
-}
-.form .button {
-  background-color: #232323;
-  color: #e9e7e7;
 }
 
 .title__request {
@@ -784,9 +808,6 @@ body._lock {
   .group-9 .form__request {
     margin-bottom: 15px;
     font-size: 30px;
-  }
-  .group-9 .button {
-    width: 100%;
   }
   .group-9 .request .form {
     flex-basis: 100%;
@@ -811,6 +832,7 @@ body._lock {
   padding-top: 10px;
 }
 .group-7 .block__title {
+  font-family: "latoregular";
   position: relative;
   cursor: pointer;
   padding-right: 15px;
@@ -929,6 +951,7 @@ body._lock {
   margin: 0 auto;
 }
 .group-8 .card__name {
+  font-family: "latoblack";
   font-size: 25px;
   font-weight: 400;
   text-align: center;
@@ -943,6 +966,7 @@ body._lock {
   min-height: 0px;
 }
 .say__subtitle {
+  font-family: "Cardo";
   font-size: 81px;
   /* line-height: 82 / 81 * 100%; */
   font-weight: bold;
@@ -1005,7 +1029,16 @@ body._lock {
   font-weight: 400;
 }
 .footer .section {
-  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .subtitle {
+  grid-column-start: 1;
+  grid-column-end: 5;
 }
 
 .logo {
@@ -1013,20 +1046,19 @@ body._lock {
   font-size: 63px;
   font-family: "Cardo";
   font-weight: 900;
-  margin-right: 120px;
+  margin-right: 20px;
   max-width: 231px;
 }
 
+.section__links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px 5%;
+}
 .section__links .subtitle {
   font-family: "Lato Black";
   font-size: 25px;
-  margin-bottom: 50px;
   font-weight: 900;
-}
-.section__links .links {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 .section__links .link {
   font-size: 21px;
@@ -1034,65 +1066,43 @@ body._lock {
   font-weight: 400;
   border: 0;
   padding-bottom: 34px;
-  margin-right: 0;
   display: block;
+  text-decoration: none;
+  color: inherit;
 }
-.section__links .block {
-  margin-right: 90px;
-}
-.section__links .block:last-child {
-  margin-right: 0;
+.section__links .link:hover {
+  text-decoration: underline;
+  color: #7d7d94;
+  transition: all 0.3s ease 0s;
 }
 
 .copyright {
-  margin-top: 130px;
+  margin-top: 120px;
   text-align: center;
 }
 
 @media (max-width: 993px) {
   .footer {
-    padding: 50px;
+    padding: 50px 0;
   }
-  .logo {
-    align-self: center;
-  }
-  .section__links .links {
+  .footer .wrapper {
     flex-direction: column;
   }
-  .section__links .subtitle {
-    margin-bottom: 25px;
-  }
-  .section__links .link {
-    padding-bottom: 20px;
-    font-size: 25px;
-  }
-  .copyright {
+  .footer .copyright {
     margin-top: 50px;
   }
+  .footer .logo {
+    margin-bottom: 30px;
+  }
+  .footer .section__links {
+    row-gap: 30px;
+  }
 }
-/* .block._init .block__title {
-    cursor: pointer;
+@media (max-width: 767px) {
+  .footer .subtitle {
+    font-size: 30px;
+  }
+  .footer .link {
+    font-size: 25px;
+  }
 }
-.block._init .block__title {
-    padding: 10px 40px 10px 10px;
-}
-.block__title{
-    position: relative;
-}
-.block._init .block__title::before,
-.block._init .block__title::after{
-    content: "";
-    width: 20px;
-    height: 1px;
-    background-color: black;
-    position: absolute;
-    right: 10px;
-    top: 20px;
-    transition: transform 0.3s ease 0s;
-}
-.block._init .block__title::after{
-    transform: rotate(-90deg);
-}
-.block._init .item__subtitle._active::after{
-    transform: rotate(0deg);
-} */
