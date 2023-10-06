@@ -1,3 +1,4 @@
+"use strict"
 //Spollers
 const spollersArray = document.querySelectorAll('[data-spollers]');
 if (spollersArray.length > 0) {

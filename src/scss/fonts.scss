@@ -1,29 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,700&family=Poppins:wght@400;500;600&family=Raleway&family=Sacramento&display=swap');
 @font-face {
-	font-family: latoblack;
+	font-family: Myriad Pro;
 	font-display: swap;
-	src: url("../fonts/latoblack.woff2") format("woff2"), url("../fonts/latoblack");
-	font-weight: 900;
-	font-style: normal;
-}
-@font-face {
-	font-family: latolight;
-	font-display: swap;
-	src: url("../fonts/latolight.woff2") format("woff2"), url("../fonts/latolight");
-	font-weight: 300;
-	font-style: normal;
-}
-@font-face {
-	font-family: latoregular;
-	font-display: swap;
-	src: url("../fonts/latoregular.woff2") format("woff2"), url("../fonts/latoregular");
+	src: url("../fonts/Myriad Pro Regular.woff2") format("woff2"), url("../fonts/Myriad Pro");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-	font-family: cardobold;
+	font-family: SourceSansPro;
 	font-display: swap;
-	src: url("../fonts/cardobold.woff") format("woff"), url("../fonts/cardobold.woff");
-	font-weight: 900;
+	src: url("../fonts/SourceSansPro-Regular.woff2") format("woff2"), url("../fonts/SourceSansPro");
+	font-weight: 400;
 	font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap');
+@font-face {
+	font-family: SourceSansPro;
+	font-display: swap;
+	src: url("../fonts/SourceSansPro-Semibold.ttf") format("woff2"), url("../fonts/SourceSansPro");
+	font-weight: 700;
+	font-style: normal;
+}
